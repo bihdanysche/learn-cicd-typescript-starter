@@ -6,8 +6,7 @@ describe("getApiKey", () => {
   test("not auth token in headers", () => {
     const headers: IncomingHttpHeaders = {};
     const result = getAPIKey(headers);
-    // expect(result).toBeNull(); *Temporaly break*
-    expect(result).toBeNaN();
+    expect(result).toBeNull();
   });
 
   test("not-fully auth token", () => {
